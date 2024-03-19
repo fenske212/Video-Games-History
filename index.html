@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of Video Games</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="plugins/graph-scroll.js"></script>
+</head>
+    <h1> The History of Video Games </h1> 
+    <h3>&nbsp; Erin: ejmccann@asu.edu &emsp;&#9900;&emsp; Brandon: bafenske@asu.edu</h3>
+    <h3 >Isaac: ifavila@asu.edu &emsp;&#9900;&emsp; Tyler: tcnewton@asu.edu</h3>
+    <h4 id="overview"> An exploration of the history of video games, including a look at the video game genre makeup of each year, the total amount of sales of video games for each year, and the total amount of games made each year.</h4>
+    <br>
+    <br>
+    <div id="barChart" class="charts">
+        <h3> Bar Chart 1 </h3>
+        <p>A look at video game genres from 1980 to 2016</p>
+        <div class="graph">
+            <svg id="barChartSvg"></svg>
+            <label for="yearCheckbox">Show all years: </label>
+            <input type="checkbox" id="yearCheckbox" onChange="drawBarChart()">
+            <br>
+            Year: <input type="number" id="barYear" min="1980" max="2016" value="1980" onchange="drawBarChart()">
+        </div>
+        <div class="sections">
+            <div> 
+                In the year 1980, the video game industry was still in its adolescence. Arcades were very popular; 
+                a place for people to have competitions and escape into a different world of pixels. Alongside this, 
+                video game consoles were starting to make their way as common household objects.
+            </div>
+            <div>
+                Over the next three decades, this industry grew significantly, both in technological advancements and 
+                cultural impact. The evolution of video game genres, as depicted by this interactive bar chart, 
+                captures the trends in consumer's interests and how the digital entertainment realm easily changes.
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="lineChart" class="charts">
+        <h3> Line Graph</h3>
+        <p>A look at the trend in sales of video games from 1980 to 2016 (by millions)</p>
+        <div class="graph"><svg id="lineChartSvg"></svg></div>
+        <div class="sections">
+            <div> 
+                Our line graph offers a glimpse into the fluctuating sale trends
+                for video games over the years. As you trace the highs and lows of the graph, 
+                you can pinpoint some certain economic shifts, worldly events, and certain popular game 
+                releases. For example, 2008 had the biggest year of sales that debuted some of the best
+                selling games like Mario Kart Wii and Grand Theft Auto IV. 
+            </div>
+            <div> 
+                This visualization depicts the evolving interests and engagement of the 
+                industry's global audience. The line graph not only shares the history of 
+                consumer's interest in gaming, but how also how the culture for it has changed. 
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="stackedAreaChart" class="charts">
+        <h3> Stacked Area Chart</h3>
+        <p>A look at the global sales (in millions) of each video game genre from 1980 to 2016 (by millions)</p>
+        <div class="graph"><svg id="stackedAreaChartSvg"></svg></div>
+        <div class="sections">
+            <div>
+                Similar to the line chart, this stacked area chart also displays the global sales of video games 
+                over the years. However, this visualization also categorizes each area by genre. Categorizing by genre
+                makes it more apparent to note the types of games that a consumer enjoys more. 
+            </div>
+            <div> 
+                The top three genre's for video games are strategy, adventure, and fighting. 
+                Specifically, popular games that are in this category include Pokemon Stadium (Strategy), Assassin's Creed 
+                (Adventure), and Super Smash Bros (Fighting). Therefore, this graph allows you to individually look at the
+                 each genre's market and audience likeness for a certain type of game. 
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="pieChart" class="charts">
+        <h3>Yearly Game Genre Makeup</h3>
+        <p>How much of each genre composes each year</p>
+        <div class="graph" id="outerPieChart"><svg id="pieChartSvg"></svg><br>
+            <input type="number" id="pieYear" min="1980" max="2016" value="1980" onchange="updatePieChart()">
+        </div>
+        <div class="sections">
+            <div>
+                To go along, this pie chart shows how each genre does specifically throughout the years. 
+                You can toggle between the years, anywhere between 1980-2016, to see how each gaming genre shifts 
+                in popularity and production. It also highlights when new genres are created or get big enough to become notable. 
+            </div>
+            <div>
+                From the dominance of action and sports games, to the constant likeness for puzzle and platform games,
+                this pie chart highlights the changing landscape of this industry.
+     
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="ps4Chart" class="charts">
+        <h3> Region Sales Graph</h3>
+        <p>Popular PS4 game sales by the million per region</p>
+        <div class="graph"><svg id="ps4ChartSvg"></svg></div>
+        <div class="sections">
+            <div> 
+                Now we can turn our attention to console-specific trends. This graph allows us to closely
+                examine the sales for games used specifically for the PlayStation 4. Here we can see how North
+                America, Europe, and Japan contribute to these game sales 
+                compared to the rest of the world.
+            </div>
+            <div>
+                It is apparent that these three regions make up most of the sales for 
+                PS4 games. This analysis shows just how big gaming culture varies by region as well. While our Region Sales Graph
+                vividly displays the direction of sales from North America, it notably lacks data from other regions/continents like South
+                America and Oceania. This can reflect the difference in market size and gaming popularity/culture in these regions.
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="charts">
+        <h3> Popular Genres Heatmap</h3>
+        <p> Most popular genres shown by region</p>
+        <div id="heatmapSVG" class="graph">
+            <button id="console-switch-button">Switch Console</button>
+            <text id="console-indicator">Current Console: XboxOne</text></div>
+        <div class="sections">
+            <div> 
+                Now that we have shown which regions purchase the most games, we can explore which games
+                those regions prefer to play. This heatmap provides a vivid illustration of regional gaming preferences. 
+                It showcases the most popular genres, derived from their sales number, across different parts of the world.
+            </div>
+            <div>
+                It appears regions across the world love their games in a similar way. The highest selling countries of North America and 
+                Europe love to play Action and Shooter games, with Xbox One users also playing Sports games such as Forza Motorsport 5.
+                Xbox One tended to better Playstation 4 in many categories, as the sales for genres across the board favors the Microsoft Console.
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="charts">
+        <h3>Yearly Most Popular Games ScatterPie</h3>
+        <p> Most Popular Games in each region over time</p>
+        <div id="pieScatter" class="graph"><svg id="pieScatter"></svg></div>
+        <div class="sections">
+            <div> 
+            Knowing the regions most preferred genres, we can expand on the heatmap visualization by looking at which games each
+            region prefers to play over time. By integrating a pie chart for each game played, we can see: when the game came out,
+            how popular the game was that year and the ratio between which regions play it.
+            </div>
+            <div>
+            By having the pie graphs as data points it more clearly depicts which countries have contributed to the growth
+            of the video game industry, by looking at the height a video game has landed on the chart, we can make an inference as to 
+            what kind of games to create for the future.
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="charts">
+        <h3> Correlation of User Score to Sales</h3>
+        <p> Regional sales of games according to their user score</p>
+        <label for="scatterplotRegion">Select a region:</label>
+            <select id="scatterplotRegion">
+                <option value="NA_Sales">North America</option>
+                <option value="EU_Sales">Europe</option>
+                <option value="JP_Sales">Japan</option>
+                <option value="Other_Sales">Other</option>
+                <option value="Global_Sales">Global</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="scatterplotColor">Color Scheme:</label>
+            <select id="scatterplotColor">
+                <option value="Electromagnetic">Electromagnetic</option>
+                <option value="Reversed Electromagnetic">Reversed Electromagnetic</option>
+                <option value="Stoplight">Stoplight</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label>
+                <input type="checkbox" id="outliers" checked> Remove Outliers
+            </label>
+            <div id="scatterplotSVG" class="graph"></div>
+        <br>
+        <div class="sections">
+            <div> 
+                In many cases post- launch, users would like to know how other people rate a game before they make a purchase. By
+                making a scatter plot, we can see how strong the relationship between these user scores and purchases are.
+            </div>
+            <div>
+                From the graph we can see that there is a strong relationship between these user scores and the sales for a video game.
+                When a game is rated higher, more people tend to buy it, and a poorly rated game will not recieve as many post-launch sales.
+                This shows that a quality product will pay dividends over time.
+            </div>
+        </div>
+    </div>
+    <br>
+</body>
+</html>
