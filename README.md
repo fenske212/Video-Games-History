@@ -1,9 +1,9 @@
 # The History of Video Games
 ## Team Members:
 - Isaac Favila		ifavila@asu.edu	1223290315
-- Tyler Newton		tcnewton@asu.edu	1220651796
-- Erin Mccann		ejmccann@asu.edu 1213248385
 - Brandon Fenske	bafenske@asu.edu  1215932783
+- Erin Mccann		ejmccann@asu.edu 1213248385
+- Tyler Newton		tcnewton@asu.edu	1220651796
 
 ## Overview
 Teaser Image:\
@@ -100,6 +100,6 @@ The ones we changed included the Map Chart and the original Innovative Visualiza
 
 ## Team workload
 - Isaac: Worked on the bar chart for genre breakdown, the line graph, the yearly game genre pie chart, and the scrolly-telling functionality.
-- Tyler: Created the Region Sales Graph and Correlation of User Score to Sales plot.
-- Erin: Created the Stacked Area Chart, and helped create the innovation visualization. I did hovering tech for both. Created narration for half of the charts. 
 - Brandon: Created the Heat Map, Contribution to Innovative Visualization, Some Narration, Wrote Proposal, WIP, Created Poster Board
+- Erin: Created the Stacked Area Chart, and helped create the innovation visualization. I did hovering tech for both. Created narration for half of the charts.
+- Tyler: Created the Region Sales Graph and Correlation of User Score to Sales plot.
